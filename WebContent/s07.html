@@ -30,35 +30,48 @@
             $.get('/edwpot/s07/timerPlain', function(data) {
                 $('#targetGetSrv').val(data);
             });
-        });
+            
+        $('#btnGetVAM').click(function() {
+             $.get('/edwpot/s07/getVAM', function(data) {
+                 $('#targetVAM').val(data);   
+             	});
+        	});
+    	});
     });
 </script>
 </head>
 <body>
-    <h1>Using AJAX via JQuery</h1>
+	<h1>Using AJAX via JQuery</h1>
 
-    <p>
-        Back to <a href=".\index.html">home</a>
-    </p>
+	<p>
+		Back to <a href=".\index.html">home</a>
+	</p>
 
-    <div>
-        <button id="btnPlain">Plain Ajax call</button>
-        <span id="targetPlain">Target for Ajax</span>
-    </div>
+	<div>
+		<button id="btnPlain">Plain Ajax call</button>
+		<span id="targetPlain">Target for Ajax</span>
+	</div>
 
-    <div>
-        <button id="btnLoad">Load text</button>
-        <span id="targetLoad">Target for load</span>
-    </div>
+	<div>
+		<button id="btnLoad">Load text</button>
+		<span id="targetLoad">Target for load</span>
+	</div>
 
-    <div>
-        <button id="btnLoadSrv">Load from servlet</button>
-        <span id="targetLoadSrv">Target for load servlet</span>
-    </div>
+	<div>
+		<button id="btnLoadSrv">Load from servlet</button>
+		<span id="targetLoadSrv">Target for load servlet</span>
+	</div>
 
-    <div>
-        <button id="btnGetSrv">GET servlet</button>
-        <input id="targetGetSrv">
-    </div>
+	<div>
+		<button id="btnGetSrv">GET servlet</button>
+		<input id="targetGetSrv">
+	</div>
+
+	<div>
+		<input id="targetDSL"> 
+		<input id="targetTime">
+		<button id="btnGetVAM">GET VAM</button>
+		<input id="targetVAM">
+	</div>
 </body>
 </html>
